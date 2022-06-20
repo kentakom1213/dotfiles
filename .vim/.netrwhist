@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/komotokenta/Docker/poweller/kyopuro'
+let g:netrw_dirhist_0='/Users/komotokenta/Docker/poweller/kyopuro/abc_training/C_diff'
+let g:netrw_dirhist_9='/Users/komotokenta/Docker/kyopuro/typical90'
+let g:netrw_dirhist_8='/Users/komotokenta/Docker/kyopuro/Others/APC/apc001'
+let g:netrw_dirhist_7='/Users/komotokenta/Docker/kyopuro/Others/APC'
+let g:netrw_dirhist_6='/Users/komotokenta/Docker/kyopuro/Others'
+let g:netrw_dirhist_5='/Users/komotokenta/Docker/poweller/share'
+let g:netrw_dirhist_4='/Users/komotokenta/Docker/poweller/share/oneliner'
+let g:netrw_dirhist_3='/Users/komotokenta/Docker/poweller/share'
+let g:netrw_dirhist_2='/Users/komotokenta/Docker/poweller/share/oneliner'

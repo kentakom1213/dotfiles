@@ -1,0 +1,6 @@
+{
+    "initial_working_directory": "~",
+    "posix_terminal_shell": "zsh",
+    "jobs_tab_visibility": "closed",
+    "show_terminal_tab": false
+}
