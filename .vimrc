@@ -6,6 +6,13 @@ set number
 syntax enable
 " カラーマップ
 colorscheme parabola
+" colorscheme PaperColor
+" colorscheme gruvbox
+" colorscheme lanox
+" colorscheme nord
+" colorscheme peaksea
+" colorscheme ir_black
+" colorscheme molokai
 
 " カレント行ハイライト
 set cursorline
@@ -37,13 +44,13 @@ inoremap <C-j> <Down>
 set shell=zsh
 
 nnoremap <C-@> :tab<Space>term<Return>
-tnoremap <C-k> <C-w>gt
-tnoremap <C-j> <C-w>gT
+tnoremap <C-[> <C-w>gt
+tnoremap <C-]> <C-w>gT
 tnoremap <C-q> <C-c><C-d>
 
 " タブ移動
-nnoremap <C-k> gt
-nnoremap <C-j> gT
+nnoremap <C-]> gt
+nnoremap <C-[> gT
 nnoremap <C-t> :tabnew<Space>
 nnoremap <C-q> :q<Return>
 
