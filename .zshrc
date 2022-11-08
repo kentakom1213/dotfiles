@@ -25,6 +25,13 @@ if [[ $(command -v exa) ]]; then
     alias ltl='exa -T -L 3 -a -I "node_modules|.git|.cache" -l --icons'
 fi
 
+# bat
+if [[ $(command -v bat) ]]; then
+    batdiff() {
+        git diff --name-only --relative --diff-filter=d | xargs bat --diff
+    }
+fi
+
 alias typora="open -a typora"
 
 # PATH
