@@ -19,16 +19,18 @@ function activate() {
 # エイリアス
 # exa
 if [[ $(command -v exa) ]]; then
-    alias ls='exa --icons --git'
-    alias ls="exa --icons"
-    alias lt='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
-    alias ltl='exa -T -L 3 -a -I "node_modules|.git|.cache" -l --icons'
+    alias ls='exa --icons'
+    alias tree='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
 fi
 
 # bat
 if [[ $(command -v bat) ]]; then
     batdiff() {
-        git diff --name-only --relative --diff-filter=d | xargs bat --diff
+        if [[ $# -gt 1  ]]; then
+            git diff $@ | bat
+        else
+            git diff HEAD . | bat
+        fi
     }
 fi
 
