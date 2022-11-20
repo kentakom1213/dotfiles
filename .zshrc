@@ -40,7 +40,13 @@ alias typora="open -a typora"
 export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
 
 # 競プロ支援ツール
-alias mkfile="python3 ~/Docker/kyopuro/Organizer/make_file.py"
+# alias mkfile="python3 ~/Docker/kyopuro/Organizer/make_file.py"
+function mkfile() {
+    local out=$(python3 ~/Docker/kyopuro/Organizer/make_file.py $@)
+    echo $out
+    echo $out | tail -n 1 | awk '{print $2}' | xargs code
+}
+
 
 [ -f "/Users/komotokenta/.ghcup/env" ] && source "/Users/komotokenta/.ghcup/env" # ghcup-env
 
