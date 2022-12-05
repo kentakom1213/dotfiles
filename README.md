@@ -13,4 +13,4 @@
 
 - [Hack Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts)
 - [MesloLGS](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
-
+- [Cica](https://github.com/miiton/Cica)
