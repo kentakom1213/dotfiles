@@ -1,6 +1,6 @@
 
 format = """\
-    🖥  [ Powell ](bg:green bold)[](green) \
+    [🌱](green)[ Powell ](bg:green bold)[](green) \
     $all\
 """
 
