@@ -409,9 +409,9 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
+      "KC_HOME",
       "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS"
+      "KC_END"
     ]
   ],
   "encoders": []
