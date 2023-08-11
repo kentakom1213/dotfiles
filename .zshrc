@@ -1,6 +1,9 @@
 # starshipの導入
 eval "$(starship init zsh)"
 
+# zshの補完
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # venv - find and activate
 function activate() {
     local venv_dir=`find $PWD -name "activate" | sed -n 1p`
