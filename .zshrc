@@ -13,7 +13,7 @@ function activate() {
 # エイリアス
 # exa
 if [[ $(command -v exa) ]]; then
-    alias ls='exa --icons'
+    alias ls='exa'  #'exa --icons'
     alias tree='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
 fi
 
@@ -40,25 +40,17 @@ export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
 
 # 競プロ支援ツール
 # rust-analyzerを有効化
-export KYOPURO_ROOT_DIR='/Users/komotokenta/Docker/kyopro/'
-export KYOPURO_LIB_PATH='/Users/komotokenta/Docker/kyopro/lib.rs'
-alias linkrs='/Users/komotokenta/Docker/kyopro/link_files/target/release/link_files'
-alias run='/Users/komotokenta/Docker/kyopro/builder/target/debug/builder'
+alias run='/Users/komotokenta/Docker/kyopro/utils/builder/target/debug/builder'
+export KYOPURO_LIBRARY_DIR='/Users/komotokenta/Docker/cp-library/'
+alias compete='/Users/komotokenta/Docker/kyopro/utils/compete.sh'
+alias snippet='/Users/komotokenta/Docker/kyopro/utils/snippet.sh'
 
-function mkfile() {
-    local out=$(python3 ~/Docker/kyopro/Organizer/make_file.py $@) \
-    && echo $out \
-    && linkrs \
-    && echo $out | rg '>' | awk '{print $2}' | pbcopy
-}
-
-function rbuild() {
-    build_dir="/Users/komotokenta/Docker/kyopro/builder/"
-    cp $1 "$build_dir/src/main.rs" \
-    && cd $build_dir \
-    && cargo build \
-    && cd "$build_dir/.." \
-    || cd "$build_dir/.."        
+function linkrs() {
+    local tmp=`pwd`
+    cd /Users/komotokenta/Docker/kyopro/utils/link_files
+    cargo run --release -- '/Users/komotokenta/Docker/kyopro/AlgoMethod' 2> /dev/null
+    cargo run --release -- '/Users/komotokenta/Docker/kyopro/AOJ' 2> /dev/null
+    cargo run --release -- '/Users/komotokenta/Docker/kyopro/LibraryChecker' 2> /dev/null
 }
 
 # . $HOME/.ghcup/env
@@ -92,4 +84,16 @@ export PATH="/usr/local/opt/git/bin:$PATH"
 export PATH="/Users/komotokenta/.rustup/toolchains/stable-aarch64-apple-darwin/bin:$PATH"
 
 export PATH="/Users/komotokenta/.detaspace/bin:$PATH"
+
+
+# bun completions
+[ -s "/Users/komotokenta/.bun/_bun" ] && source "/Users/komotokenta/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+# npmのバイナリ
+export PATH=$PATH:`npm prefix --location=global`/bin
 
