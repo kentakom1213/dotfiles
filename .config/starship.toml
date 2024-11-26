@@ -1,14 +1,14 @@
 
 format = """\
-    [🌱](green)[ Powell ](bg:green bold)[](green) \
+     [ 󰻀 Pwll ](bg:blue bold)[](blue) \
     $all\
 """
 
 [directory]
 truncation_length = 10
 
-[cmd_duration]
-disabled = true
+# [cmd_duration]
+# disabled = true
 
 [python]
 python_binary = "python3"
