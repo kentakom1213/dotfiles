@@ -23,6 +23,10 @@ highlight CursorLine cterm=underline ctermfg=None ctermbg=None
 " タイトルを表示
 set title
 
+" 削除時にヤンクさせない
+nnoremap <leader>d "_d
+nnoremap <leader>x "_x
+
 " tab
 set expandtab
 set tabstop=4

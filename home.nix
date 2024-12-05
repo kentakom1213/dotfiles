@@ -43,6 +43,7 @@
     pkgs.ripgrep
     pkgs.fd
     pkgs.bat
+    pkgs.eza
   ];
   
   programs.git = {
@@ -69,6 +70,10 @@
     settings = {};
   };
 
+  programs.neovim = {
+    enable = true;
+  };
+
   programs.zsh = {
     enable = true;
 
@@ -77,23 +82,15 @@
     dotDir = ".config/zsh";
 
     syntaxHighlighting.enable = true;
+    autosuggestion.enable = true;
 
     # .zshenv
     envExtra = ''
       . "$HOME/.cargo/env"
-      eval "$(starship init zsh)"
-
-      # mcfly
-      eval "$(mcfly init zsh)"
  
-      # zshの補完
-      source ~/develop/utils/zsh-autosuggestions/zsh-autosuggestions.zsh
-      
-      # zshのハイライト
-      source ~/develop/utils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-      
       # コマンド履歴
       export SAVEHIST=100000
+      export MCFLY_RESULTS=30
       
       # venv - find and activate
       function activate() {
@@ -102,23 +99,9 @@
       }
       
       # エイリアス
-      # exa
-      if [[ $(command -v exa) ]]; then
-          alias ls='exa --icons'
-          alias tree='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
-      fi
-      
-      # bat
-      if [[ $(command -v bat) ]]; then
-          function batdiff() {
-              if [[ $# -gt 1  ]]; then
-                  git diff $@ | bat
-              else
-                  git diff HEAD . | bat
-              fi
-          }
-      fi
-      
+      alias ls='exa --icons'
+      alias tree='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+
       # diff
       alias diff="diff -u --color"
       
@@ -146,16 +129,11 @@
       # pbcopy
       alias pbcopy='xclip -selection clipboad'
       alias pbpaste='xclip -selection clipboad -o'
-      
-      # codon
-      export PATH=/home/powell/.codon/bin:$PATH
-      export CODON_PYTHON=/usr/lib/x86_64-linux-gnu/libpython3.10.so
-      
+
       [ -f "/home/powell/.ghcup/env" ] && . "/home/powell/.ghcup/env" # ghcup-env
       
       # GPG key
       export GPG_TTY=$(tty)
-      
       
       # cargo fix と cargo fmt
       alias ff='cargo fix --allow-dirty --allow-staged && cargo fmt'
