@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "powell";
-  home.homeDirectory = "/home/powell";
+  home.username = "komotokenta";
+  home.homeDirectory = "/Users/komotokenta/";
 
   home.sessionVariables = {
     LANG = "ja_JP.UTF-8";
@@ -39,13 +39,16 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    pkgs.glibcLocales
     pkgs.ripgrep
     pkgs.fd
     pkgs.bat
     pkgs.eza
   ];
   
+  programs.gpg = {
+      enable = true;
+  };
+
   programs.git = {
     enable = true;
     userName = "kentakom1213";
@@ -106,13 +109,7 @@
       alias diff="diff -u --color"
       
       # 競プロ支援ツール
-      export KYOPRO_DIR='/home/powell/develop/algo/kyopro'
-      export KYOPURO_LIBRARY_DIR='/home/powell/develop/algo/cp-library/cp-library-rs'
-      export BUNDLER='/home/powell/develop/algo/cp-library/expander/target/release/expand'
-      alias compete='/home/powell/develop/algo/kyopro/utils/compete.sh'
-      alias snippet='/home/powell/develop/algo/kyopro/utils/snippet.sh'
-      alias bundle='/home/powell/develop/algo/cp-library/expander/target/release/expand $KYOPURO_LIBRARY_DIR'
-      alias bundler='/home/powell/develop/algo/cp-library/expander/target/release/expand'
+      source $HOME/.config/kyopro/util.sh
 
       # Rust関係
       export RUST_BACKTRACE=1
@@ -121,19 +118,13 @@
       
       # バイナリにパスを通す
       export PATH='/home/powell/.local/bin':$PATH
-      
+
+      # GPG key
+      export GPG_TTY=$(tty)
+           
       export NVM_DIR="$HOME/.nvm"
       [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
       [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-      
-      # pbcopy
-      alias pbcopy='xclip -selection clipboad'
-      alias pbpaste='xclip -selection clipboad -o'
-
-      [ -f "/home/powell/.ghcup/env" ] && . "/home/powell/.ghcup/env" # ghcup-env
-      
-      # GPG key
-      export GPG_TTY=$(tty)
       
       # cargo fix と cargo fmt
       alias ff='cargo fix --allow-dirty --allow-staged && cargo fmt'
@@ -141,19 +132,8 @@
       # rye
       source "$HOME/.rye/env"
       
-      # marp
-      alias marp=marp-cli-carroarmato0.marp
-      
       # slide
-      alias slide-flow='/home/powell/develop/nu/slides/slide-flow/target/release/slide-flow'
-      
-      # pnpm
-      export PNPM_HOME="/home/powell/.local/share/pnpm"
-      case ":$PATH:" in
-        *":$PNPM_HOME:"*) ;;
-        *) export PATH="$PNPM_HOME:$PATH" ;;
-      esac
-      # pnpm end
+      alias slide-flow='$HOME/Docker/slides/slide-flow/target/release/slide-flow'
     '';
 
     # .zshlogin

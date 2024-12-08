@@ -1,6 +1,6 @@
 
 format = """\
-     [ 󰻀 Pwll ](bg:blue bold)[](blue) \
+     [ 🌱 Mac ](bg:green bold)[](green) \
     $all\
 """
 
