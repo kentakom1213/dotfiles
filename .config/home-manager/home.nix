@@ -89,6 +89,9 @@
 
     # .zshenv
     envExtra = ''
+      # homebrew
+      eval $(/opt/homebrew/bin/brew shellenv)
+
       . "$HOME/.cargo/env"
  
       # コマンド履歴
