@@ -1,4 +1,4 @@
- "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 
 # コマンド履歴
 export SAVEHIST=100000

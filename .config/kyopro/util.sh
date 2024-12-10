@@ -3,8 +3,8 @@
 # 競プロ支援ツール
 
 # パス
-export KYOPRO_DIR=$HOME/Docker/kyopro
-export KYOPURO_LIBRARY_DIR=$HOME/Docker/cp-library
+export KYOPRO_DIR=$HOME/develop/algo/kyopro
+export KYOPURO_LIBRARY_DIR=$HOME/develop/algo/cp-library
 
 # バンドラ
 export BUNDLER=$KYOPURO_LIBRARY_DIR/expander/target/release/expand
