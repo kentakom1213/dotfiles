@@ -86,74 +86,7 @@
 
     # .zshenv
     envExtra = ''
-      . "$HOME/.cargo/env"
- 
-      # コマンド履歴
-      export SAVEHIST=100000
-      export MCFLY_RESULTS=30
-      
-      # venv - find and activate
-      function activate() {
-          local venv_dir=`find $PWD -name "activate" | sed -n 1p`
-          . $venv_dir
-      }
-      
-      # エイリアス
-      alias ls='exa --icons'
-      alias tree='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
-
-      # diff
-      alias diff="diff -u --color"
-      
-      # 競プロ支援ツール
-      export KYOPRO_DIR='/home/powell/develop/algo/kyopro'
-      export KYOPURO_LIBRARY_DIR='/home/powell/develop/algo/cp-library/cp-library-rs'
-      export BUNDLER='/home/powell/develop/algo/cp-library/expander/target/release/expand'
-      alias compete='/home/powell/develop/algo/kyopro/utils/compete.sh'
-      alias snippet='/home/powell/develop/algo/kyopro/utils/snippet.sh'
-      alias bundle='/home/powell/develop/algo/cp-library/expander/target/release/expand $KYOPURO_LIBRARY_DIR'
-      alias bundler='/home/powell/develop/algo/cp-library/expander/target/release/expand'
-
-      # Rust関係
-      export RUST_BACKTRACE=1
-      export RUST_LOG=info
-      export PATH=$HOME/.cargo/bin:$PATH
-      
-      # バイナリにパスを通す
-      export PATH='/home/powell/.local/bin':$PATH
-      
-      export NVM_DIR="$HOME/.nvm"
-      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-      [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-      
-      # pbcopy
-      alias pbcopy='xclip -selection clipboad'
-      alias pbpaste='xclip -selection clipboad -o'
-
-      [ -f "/home/powell/.ghcup/env" ] && . "/home/powell/.ghcup/env" # ghcup-env
-      
-      # GPG key
-      export GPG_TTY=$(tty)
-      
-      # cargo fix と cargo fmt
-      alias ff='cargo fix --allow-dirty --allow-staged && cargo fmt'
-      
-      # rye
-      source "$HOME/.rye/env"
-      
-      # marp
-      alias marp=marp-cli-carroarmato0.marp
-      
-      # slide
-      alias slide-flow='/home/powell/develop/nu/slides/slide-flow/target/release/slide-flow'
-      
-      # pnpm
-      export PNPM_HOME="/home/powell/.local/share/pnpm"
-      case ":$PATH:" in
-        *":$PNPM_HOME:"*) ;;
-        *) export PATH="$PNPM_HOME:$PATH" ;;
-      esac
-      # pnpm end
+    source ~/.config/home-manager/zshenv.sh
     '';
 
     # .zshlogin
