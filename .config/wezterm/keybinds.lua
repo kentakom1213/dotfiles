@@ -146,6 +146,22 @@ return {
     { key = 'Copy', mods = 'NONE', action = act.CopyTo 'Clipboard' },
     { key = 'Paste', mods = 'NONE', action = act.PasteFrom 'Clipboard' },
 
+    -- Paneの移動
+    -- Pane作成 leader + r or d
+    { key = "d", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+    { key = "r", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+    -- Paneを閉じる leader + x
+    { key = "x", mods = "LEADER", action = act({ CloseCurrentPane = { confirm = true } }) },
+    -- Pane移動 leader + hlkj
+    { key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
+    { key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
+    { key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
+    { key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
+    -- Pane選択
+    { key = "[", mods = "CTRL|SHIFT", action = act.PaneSelect },
+    -- 選択中のPaneのみ表示
+    { key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
+
     -- コピーモードを開始
     { key = "[", mods = "LEADER", action = act.ActivateCopyMode },
   },
@@ -215,7 +231,7 @@ return {
       { key = 'UpArrow', mods = 'NONE', action = act.CopyMode 'MoveUp' },
       { key = 'DownArrow', mods = 'NONE', action = act.CopyMode 'MoveDown' },
 
-            -- 移動
+      -- 移動
       { key = "h", mods = "NONE", action = act.CopyMode("MoveLeft") },
       { key = "j", mods = "NONE", action = act.CopyMode("MoveDown") },
       { key = "k", mods = "NONE", action = act.CopyMode("MoveUp") },

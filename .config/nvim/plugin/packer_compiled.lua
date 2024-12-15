@@ -79,6 +79,21 @@ _G.packer_plugins = {
     path = "/home/powell/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/home/powell/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
+  gruvbox = {
+    loaded = true,
+    path = "/home/powell/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/gruvbox-community/gruvbox"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/powell/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/powell/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -103,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/powell/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/powell/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
 
