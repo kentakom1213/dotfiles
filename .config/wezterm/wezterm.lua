@@ -6,7 +6,6 @@ config.font_size = 14.0
 config.use_ime = true
 config.window_background_opacity = 0.85
 config.macos_window_background_blur = 20
-config.window_decorations = "RESIZE"
 config.color_scheme = 'Gruvbox dark, medium (base16)'
 
 -- タブが1つしかない場合にはタブバーを表示しない
