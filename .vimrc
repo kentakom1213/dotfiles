@@ -187,3 +187,7 @@ let g:vsnip_snippet_dir = expand($KYOPURO_LIBRARY_DIR)
 " let g:vsnip_filetypes.javascriptreact = ['javascript']
 " let g:vsnip_filetypes.typescriptreact = ['typescript']
 
+" vsnip
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+

@@ -44,9 +44,9 @@
     pkgs.bat
     pkgs.eza
   ];
-  
-  programs.gpg = {
-      enable = true;
+
+   programs.gpg = {
+    enable = true;
   };
 
   programs.git = {
