@@ -1,37 +1,6 @@
 {
     "profiles": [
         {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "Change Control + h/j/k/l to Arrows",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "down_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "up_arrow" }],
-                                "type": "basic"
-                            }
-                        ]
-                    }
-                ]
-            },
             "devices": [
                 {
                     "identifiers": {
@@ -44,7 +13,6 @@
                 }
             ],
             "name": "Default profile",
-            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "caps_lock" },
@@ -58,6 +26,7 @@
         },
         {
             "name": "US",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
