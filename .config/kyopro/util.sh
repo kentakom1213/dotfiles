@@ -4,10 +4,11 @@
 
 # パス
 export KYOPRO_DIR=$HOME/develop/algo/kyopro
-export KYOPURO_LIBRARY_DIR=$HOME/develop/algo/cp-library
+local KYOPRO_UTIL_DIR=$HOME/develop/algo/cp-library
+export KYOPURO_LIBRARY_DIR=$KYOPRO_UTIL_DIR/cp-library-rs
 
 # バンドラ
-export BUNDLER=$KYOPURO_LIBRARY_DIR/expander/target/release/expand
+export BUNDLER=$KYOPRO_UTIL_DIR/expander/target/release/expand
 
 # エイリアス
 alias compete=$HOME/.config/kyopro/compete.sh
