@@ -1,6 +1,6 @@
 
 format = """\
-     [ 🌱 Mac ](bg:green bold)[](green) \
+     [  Mac ](bg:green black bold)[](green) \
     $all\
 """
 
