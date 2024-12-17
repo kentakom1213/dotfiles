@@ -43,6 +43,7 @@
     pkgs.fd
     pkgs.bat
     pkgs.eza
+    pkgs.rm-improved
   ];
 
    programs.gpg = {
