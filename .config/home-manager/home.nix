@@ -44,6 +44,7 @@
     pkgs.fd
     pkgs.bat
     pkgs.eza
+    pkgs.yazi
   ];
   
   programs.git = {

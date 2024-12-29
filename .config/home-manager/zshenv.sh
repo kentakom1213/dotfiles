@@ -1,13 +1,27 @@
 . "$HOME/.cargo/env"
 
+# デフォルトエディタ
+export EDITOR=code
+
 # コマンド履歴
 export SAVEHIST=100000
 export MCFLY_RESULTS=30
+export MCFLY_FUZZY=1
 
 # venv - find and activate
 function activate() {
     local venv_dir=`find $PWD -name "activate" | sed -n 1p`
     . $venv_dir
+}
+
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
 
 # エイリアス
