@@ -65,7 +65,7 @@ source "$HOME/.rye/env"
 alias marp=marp-cli-carroarmato0.marp
 
 # slide
-alias slide-flow='/home/powell/develop/nu/slides/slide-flow/target/release/slide-flow'
+alias sf='/home/powell/develop/nu/slides/slide-flow/target/release/slide-flow'
 
 # pnpm
 export PNPM_HOME="/home/powell/.local/share/pnpm"
