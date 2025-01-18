@@ -1,3 +1,4 @@
+add_newline = true
 
 format = """\
      [  Mac ](bg:green black bold)[](green) \
