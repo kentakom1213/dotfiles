@@ -44,6 +44,7 @@
     pkgs.bat
     pkgs.eza
     pkgs.rm-improved
+    pkgs.yazi
   ];
 
    programs.gpg = {
