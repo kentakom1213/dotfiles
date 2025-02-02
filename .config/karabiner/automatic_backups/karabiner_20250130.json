@@ -1,14 +1,14 @@
 {
     "profiles": [
-        {
-            "complex_modifications": {
+        { 
+             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Change Control + h/j/k/l to Arrows",
+                        "description": "Change Control + p/n to Arrows",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "n",
                                     "modifiers": {
                                         "mandatory": ["control"],
                                         "optional": ["any"]
@@ -19,7 +19,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "p",
                                     "modifiers": {
                                         "mandatory": ["control"],
                                         "optional": ["any"]
@@ -44,7 +44,6 @@
                 }
             ],
             "name": "Default profile",
-            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "caps_lock" },
@@ -58,6 +57,7 @@
         },
         {
             "name": "US",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]

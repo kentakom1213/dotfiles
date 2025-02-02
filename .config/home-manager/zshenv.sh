@@ -18,6 +18,7 @@ function y() {
 # コマンド履歴
 export SAVEHIST=100000
 export MCFLY_RESULTS=30
+export MCFLY_FUZZY=1
 
 # venv - find and activate
 function activate() {
