@@ -45,6 +45,7 @@
     pkgs.bat
     pkgs.eza
     pkgs.yazi
+    pkgs.fzf
   ];
   
   programs.git = {
@@ -61,10 +62,10 @@
     };
   };
 
-  programs.mcfly = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+  # programs.mcfly = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  # };
 
   programs.starship = {
     enable = true;

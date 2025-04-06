@@ -1,0 +1,63 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+shift+c",
+    "command": "github.copilot.toggleCopilot",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-mdx.toggleStrong",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'mdx'"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+meta+v",
+    "command": "overleaf-workshop.compileManager.viewPdf",
+    "when": "editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' || editorTextFocus && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop' || editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop'"
+  },
+  {
+    "key": "ctrl+alt+v",
+    "command": "-overleaf-workshop.compileManager.viewPdf",
+    "when": "editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' || editorTextFocus && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop' || editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop'"
+  },
+  {
+    "key": "ctrl+meta+b",
+    "command": "overleaf-workshop.compileManager.compile",
+    "when": "editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' || editorTextFocus && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop' || editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop'"
+  },
+  {
+    "key": "ctrl+alt+b",
+    "command": "-overleaf-workshop.compileManager.compile",
+    "when": "editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' || editorTextFocus && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop' || editorTextFocus && overleaf-workshop.activateCompile && resourceExtname == '.tex' && resourceScheme == 'overleaf-workshop'"
+  },
+  {
+    "key": "ctrl+l ctrl+j",
+    "command": "latex-workshop.synctex",
+    "when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$/"
+  },
+  {
+    "key": "ctrl+l alt+j",
+    "command": "-latex-workshop.synctex",
+    "when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$/"
+  }
+]

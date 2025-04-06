@@ -4,8 +4,11 @@
 export EDITOR=code
 
 # コマンド履歴
-export SAVEHIST=100000
-export MCFLY_RESULTS=30
+export SAVEHIST=10000
+
+# mcfly
+eval "$(mcfly init zsh)"
+export MCFLY_RESULTS=50
 export MCFLY_FUZZY=1
 
 # venv - find and activate
@@ -13,6 +16,9 @@ function activate() {
     local venv_dir=`find $PWD -name "activate" | sed -n 1p`
     . $venv_dir
 }
+
+# fzf
+# source <(fzf --zsh)
 
 # yazi
 function y() {
@@ -27,6 +33,7 @@ function y() {
 # エイリアス
 alias ls='exa --icons'
 alias tree='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+alias wezterm='flatpak run org.wezfurlong.wezterm'
 
 # diff
 alias diff="diff -u --color"
@@ -62,7 +69,7 @@ alias ff='cargo fix --allow-dirty --allow-staged && cargo fmt'
 source "$HOME/.rye/env"
 
 # marp
-alias marp=marp-cli-carroarmato0.marp
+# alias marp=marp-cli-carroarmato0.marp
 
 # slide
 alias sf='/home/powell/develop/nu/slides/slide-flow/target/release/slide-flow'
