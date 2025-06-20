@@ -17,7 +17,7 @@ function y() {
 
 # コマンド履歴
 export SAVEHIST=100000
-export MCFLY_RESULTS=30
+export MCFLY_RESULTS=50
 export MCFLY_FUZZY=1
 
 # venv - find and activate
@@ -27,8 +27,8 @@ function activate() {
 }
 
 # エイリアス
-alias ls='exa --icons'
-alias tree='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+alias ls='eza --icons'
+alias tree='eza -T -L 3 -a -I "node_modules|.git|.cache" --icons'
 alias typora='/Applications/Typora.app/Contents/MacOS/Typora'
 
 # diff
@@ -44,6 +44,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 
 # バイナリにパスを通す
 export PATH='/home/powell/.local/bin':$PATH
+export PATH='/Users/komotokenta/.local/bin':$PATH
 
 # GPG key
 export GPG_TTY=$(tty)
@@ -59,5 +60,12 @@ alias ff='cargo fix --allow-dirty --allow-staged && cargo fmt'
 source "$HOME/.rye/env"
 
 # slide
-alias sf='$HOME/develop/documents/slides/slide-flow/target/release/slide-flow'
+alias sf='cargo run --manifest-path ~/develop/oss/slide-flow/Cargo.toml --'
+
+# haskell
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
+
+# go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
