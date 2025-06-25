@@ -46,6 +46,8 @@
     pkgs.eza
     pkgs.yazi
     pkgs.fzf
+    pkgs.nodejs_23
+    pkgs.wrangler
   ];
   
   programs.git = {
@@ -130,6 +132,7 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
     EDITOR = "vim";
+    N_PREFIX = "$HOME/.n";
   };
 
   # Let Home Manager install and manage itself.

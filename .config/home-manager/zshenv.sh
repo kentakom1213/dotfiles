@@ -31,9 +31,16 @@ function y() {
 }
 
 # エイリアス
-alias ls='exa --icons'
-alias tree='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+alias ls='eza --icons'
+alias tree='eza -T -L 3 -a -I "node_modules|.git|.cache" --icons'
 alias wezterm='flatpak run org.wezfurlong.wezterm'
+
+# HOME/ENDで行末，行頭に移動
+bindkey "^[[H" beginning-of-line
+bindkey "^[OH" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[OF" end-of-line
+bindkey "^[[3~" delete-char
 
 # diff
 alias diff="diff -u --color"
@@ -72,7 +79,7 @@ source "$HOME/.rye/env"
 # alias marp=marp-cli-carroarmato0.marp
 
 # slide
-alias sf='/home/powell/develop/nu/slides/slide-flow/target/release/slide-flow'
+alias sf='cargo run --manifest-path /home/powell/develop/products/slide-flow/Cargo.toml -q --'
 
 # pnpm
 export PNPM_HOME="/home/powell/.local/share/pnpm"
@@ -82,3 +89,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# golang
+export PATH=$PATH:/usr/local/go/bin

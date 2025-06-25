@@ -24,6 +24,11 @@
   },
   "[javascript]": {
     "editor.maxTokenizationLineLength": 2500,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[gleam]": {
+    "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
   "[typescript]": {
@@ -44,7 +49,7 @@
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
   "[markdown]": {
-    "editor.tabSize": 4,
+    "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.wordWrap": "on",
     "editor.quickSuggestions": {
@@ -81,7 +86,7 @@
   "markdown.marp.enableHtml": true,
   // "terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
   // font
-  "editor.fontFamily": "'Ubuntu Mono', Cica",
+  "editor.fontFamily": "'Ubuntu Mono', Cica, 'HackGen Console NF'",
   "editor.lineHeight": 17,
   "editor.letterSpacing": 0.4,
   "terminal.integrated.letterSpacing": 0.5,
@@ -91,7 +96,7 @@
   "git.openRepositoryInParentFolders": "never",
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
@@ -118,7 +123,7 @@
   "comment-formula.enableLanguages": ["cpp", "python", "rust", "python"],
   "comment-formula.style": "none",
   "glassit.alpha": 220,
-  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
   "terminal.integrated.fontFamily": "'Ubuntu Mono', 'HackGen Console NF'",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -131,7 +136,6 @@
   },
   "github.copilot.editor.enableAutoCompletions": true,
   "typst-lsp.experimentalFormatterMode": "on",
-  "tinymist.formatterMode": "typstfmt",
   "editor.fontSize": 15,
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -150,5 +154,12 @@
   "latex-workshop.synctex.afterBuild.enabled": true,
   "terminal.integrated.enableImages": true,
   "githubPullRequests.pullBranch": "never",
-  "terminal.external.linuxExec": "wezterm"
+  "rust-analyzer.cargo.target": "wasm32-unknown-unknown",
+  "tinymist.exportPdf": "onSave",
+  "[svelte]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+  "umath.preview.enableMathPreview": false
 }

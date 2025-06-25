@@ -59,5 +59,14 @@
     "key": "ctrl+l alt+j",
     "command": "-latex-workshop.synctex",
     "when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$/"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "github.copilot.completions.toggle",
+    "when": "!terminalFocus"
   }
 ]
