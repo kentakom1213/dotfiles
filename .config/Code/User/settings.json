@@ -96,7 +96,7 @@
   "git.openRepositoryInParentFolders": "never",
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
@@ -123,7 +123,7 @@
   "comment-formula.enableLanguages": ["cpp", "python", "rust", "python"],
   "comment-formula.style": "none",
   "glassit.alpha": 220,
-  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.colorTheme": "Gruvbox Dark Soft",
   "terminal.integrated.fontFamily": "'Ubuntu Mono', 'HackGen Console NF'",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -161,5 +161,35 @@
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "svelte.enable-ts-plugin": true,
-  "umath.preview.enableMathPreview": false
+  "umath.preview.enableMathPreview": false,
+
+  // BibTeXファイルで保存時に自動フォーマットを有効にする
+  "[bibtex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.formatOnSave": true
+  },
+
+  // 各フィールドのインデント（"2 spaces", "4 spaces", "tab"など）
+  "latex-workshop.bibtex-format.tab": "2 spaces",
+
+  // trueにすると、エントリの最後のフィールドにもカンマを付ける
+  "latex-workshop.bibtex-format.trailingComma": false,
+
+  // エントリをソートする際のキーの配列。["author", "year", "title"]のように指定
+  "latex-workshop.bibtex-format.sortby": [
+    "key" // デフォルトは引用キーでソート
+  ],
+
+  // 各エントリ内のフィールドをソートする際の順番
+  "latex-workshop.bibtex-fields.order": [
+    "author",
+    "title",
+    "journal",
+    "volume",
+    "number",
+    "pages",
+    "year",
+    "publisher",
+    "booktitle"
+  ]
 }
