@@ -45,7 +45,7 @@
     pkgs.eza
     pkgs.rm-improved
     pkgs.yazi
-    pkgs.nodejs_24
+    # pkgs.nodejs_24
   ];
 
    programs.gpg = {

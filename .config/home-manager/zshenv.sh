@@ -27,8 +27,8 @@ function activate() {
 }
 
 # エイリアス
-alias ls='eza --icons'
-alias tree='eza -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+alias ls='eza --icons auto'
+alias tree='eza -T -L 3 -a -I "node_modules|.git|.cache" --icons auto'
 alias typora='/Applications/Typora.app/Contents/MacOS/Typora'
 
 # diff
@@ -53,14 +53,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# cargo fix と cargo fmt
-alias ff='cargo fix --allow-dirty --allow-staged && cargo fmt'
-
 # rye
 source "$HOME/.rye/env"
 
 # slide
-alias sf='cargo run --manifest-path ~/develop/oss/slide-flow/Cargo.toml --'
+alias sf=slide-flow
+alias pg=password-generator
 
 # haskell
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
