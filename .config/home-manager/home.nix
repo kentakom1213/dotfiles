@@ -45,7 +45,7 @@
     pkgs.eza
     pkgs.rm-improved
     pkgs.yazi
-    # pkgs.nodejs_24
+    pkgs.nodejs_24
   ];
 
    programs.gpg = {
@@ -100,6 +100,10 @@
     '';
   };
 
+  programs.zellij = {
+    enable = true;
+  };
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -138,4 +142,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.direnv.enable = true;
 }

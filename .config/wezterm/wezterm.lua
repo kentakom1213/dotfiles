@@ -2,11 +2,20 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 config.automatically_reload_config = true
-config.font_size = 15.0
 config.use_ime = true
 config.window_background_opacity = 0.85
 config.macos_window_background_blur = 20
-config.color_scheme = 'Gruvbox dark, medium (base16)'
+-- config.color_scheme = 'Gruvbox dark, medium (base16)'
+
+-- フォント
+config.font = wezterm.font_with_fallback {
+    -- 'Ubuntu Mono',
+    'HackGen Console',
+    'JetBrains Mono',
+    -- 'Cica',
+    -- 'UDEV Gothic NF'
+}
+config.font_size = 18.0
 
 -- タブが1つしかない場合にはタブバーを表示しない
 config.hide_tab_bar_if_only_one_tab = true

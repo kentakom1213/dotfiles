@@ -2,6 +2,7 @@
 
 # homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
+export PATH="/opt/homebrew/bin:$PATH"
 
 . "$HOME/.cargo/env"
 
@@ -67,3 +68,8 @@ alias pg=password-generator
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# ipe
+alias ipe='/Applications/Ipe.app/Contents/MacOS/ipe'
+
+# codon
+export PATH=/Users/komotokenta/.codon/bin:$PATH
