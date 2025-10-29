@@ -29,33 +29,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "PageUp / PageDown",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "page_up" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "page_down" }],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
@@ -86,7 +59,6 @@
                 }
             ],
             "name": "Default profile",
-            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "caps_lock" },
@@ -131,6 +103,7 @@
                 ]
             },
             "name": "US",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
