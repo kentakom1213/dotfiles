@@ -5,6 +5,7 @@ export EDITOR=code
 
 # コマンド履歴
 export SAVEHIST=10000
+setopt EXTENDED_HISTORY
 
 # mcfly
 eval "$(mcfly init zsh)"
@@ -69,9 +70,6 @@ alias pbpaste='xclip -selection clipboad -o'
 # GPG key
 export GPG_TTY=$(tty)
 
-# rye
-source "$HOME/.rye/env"
-
 # marp
 # alias marp=marp-cli-carroarmato0.marp
 
@@ -91,3 +89,13 @@ esac
 
 # golang
 export PATH=$PATH:/usr/local/go/bin
+
+# codon
+export PATH=/home/powell/.codon/bin:$PATH
+
+# GPG
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+# 音を鳴らす
+alias comp='canberra-gtk-play -i complete'
+

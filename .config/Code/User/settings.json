@@ -7,7 +7,7 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "python.defaultInterpreterPath": "/usr/bin/python3",
   "[python]": {
     "editor.tabSize": 4,
     "editor.formatOnType": true,
@@ -96,7 +96,7 @@
   "git.openRepositoryInParentFolders": "never",
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
@@ -110,7 +110,7 @@
   "files.insertFinalNewline": true,
   "files.simpleDialog.enable": true,
   "editor.showFoldingControls": "always",
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "explorer.incrementalNaming": "smart",
   "code-eol.color": "#a39586",
   "editor.minimap.enabled": false,
@@ -123,7 +123,7 @@
   "comment-formula.enableLanguages": ["cpp", "python", "rust", "python"],
   "comment-formula.style": "none",
   "glassit.alpha": 220,
-  "workbench.colorTheme": "Gruvbox Dark Soft",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
   "terminal.integrated.fontFamily": "'Ubuntu Mono', 'HackGen Console NF'",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -162,13 +162,9 @@
   },
   "svelte.enable-ts-plugin": true,
   "umath.preview.enableMathPreview": false,
-
-  // BibTeXファイルで保存時に自動フォーマットを有効にする
-  "[bibtex]": {
-    "editor.defaultFormatter": "James-Yu.latex-workshop",
-    "editor.formatOnSave": true
+  "[go]": {
+    "editor.formatOnSave": false
   },
-
   // 各フィールドのインデント（"2 spaces", "4 spaces", "tab"など）
   "latex-workshop.bibtex-format.tab": "2 spaces",
 
@@ -191,5 +187,26 @@
     "year",
     "publisher",
     "booktitle"
-  ]
+  ],
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "zig.zls.enabled": "on",
+  "docker.extension.enableComposeLanguageServer": false,
+  "go.lintOnSave": "off",
+  "go.toolsManagement.autoUpdate": true,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "editor.stickyScroll.scrollWithEditor": false,
+  "terminal.integrated.stickyScroll.enabled": false
 }

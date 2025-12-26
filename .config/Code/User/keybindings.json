@@ -68,5 +68,9 @@
     "key": "ctrl+shift+c",
     "command": "github.copilot.completions.toggle",
     "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
   }
 ]

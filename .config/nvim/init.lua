@@ -29,6 +29,7 @@ vim.opt.number = true         -- 行番号を表示
 vim.opt.tabstop = 4           -- タブ幅を4に設定
 vim.opt.shiftwidth = 4        -- 自動インデント幅
 vim.opt.expandtab = true      -- タブをスペースに変換
+vim.opt.clipboard = "unnamedplus" -- クリップボード連携
 
 -- キーマッピング（変更なし）
 vim.keymap.set('n', '<Space>', ':', { noremap = true, silent = true })
