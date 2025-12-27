@@ -6,6 +6,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 . "$HOME/.cargo/env"
 
+# mcfly
+eval "$(mcfly init zsh)"
+
 # yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -73,3 +76,6 @@ alias ipe='/Applications/Ipe.app/Contents/MacOS/ipe'
 
 # codon
 export PATH=/Users/komotokenta/.codon/bin:$PATH
+
+export PKG_CONFIG_PATH="/opt/homebrew/lib/pkgconfig"
+
