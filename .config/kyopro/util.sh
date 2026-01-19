@@ -9,4 +9,4 @@ export KYOPURO_LIBRARY_DIR=$HOME/develop/algo/cp-library/cp-library-rs
 # エイリアス
 alias compete=$HOME/.config/kyopro/compete.sh
 
-alias bundle="bundler $KYOPURO_LIBRARY_DIR"
+alias bundle="~/.local/bin/bundler $KYOPURO_LIBRARY_DIR"

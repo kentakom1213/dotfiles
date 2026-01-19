@@ -7,7 +7,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 . "$HOME/.cargo/env"
 
 # mcfly
-eval "$(mcfly init zsh)"
+# eval "$(mcfly init zsh)"
 
 # yazi
 function y() {
@@ -79,3 +79,5 @@ export PATH=/Users/komotokenta/.codon/bin:$PATH
 
 export PKG_CONFIG_PATH="/opt/homebrew/lib/pkgconfig"
 
+# Googleドライブ
+export MYDRIVE="$HOME/Google Drive/マイドライブ"

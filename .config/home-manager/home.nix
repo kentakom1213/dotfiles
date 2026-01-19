@@ -33,10 +33,10 @@
     };
   };
 
-  # programs.mcfly = {
-  #   enable = true;
-  #   enableZshIntegration = true;
-  # };
+  programs.mcfly = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   programs.starship = {
     enable = true;
