@@ -11,6 +11,7 @@ config.color_scheme = 'Gruvbox dark, medium (base16)'
 config.font_size = 15.0
 config.font = wezterm.font_with_fallback {
     -- "Ubuntu Mono",
+    -- "HackLineNF",
     "HackGen Console",
     "JetBrains Mono",
 }

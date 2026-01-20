@@ -1,0 +1,28 @@
+
+[window]
+# ウィンドウ内の余白
+padding = { x = 10, y = 10 }
+
+# ウィンドウの透明度 (0.0が完全に透明、1.0が不透明)
+opacity = 0.9
+
+[font]
+size = 13.5
+
+[font.offset]
+x = -1
+y = 0
+
+[font.normal]
+# family = "HackGen Console NF"
+family = "HackLineNF"
+style = "Regular"
+
+[general]
+# 設定を保存したときに即時反映させる
+live_config_reload = true
+
+[[keyboard.bindings]]
+key = "i"
+mods = "Control"
+action = "ToggleViMode"

@@ -35,6 +35,13 @@
     };
   };
 
+  # codex cli
+  home.file.".local/bin/codex".text = ''
+    #!/usr/bin/env bash
+    exec ${pkgs.nodejs_20}/bin/npx @openai/codex "$@"
+  '';
+  home.file.".local/bin/codex".executable = true;
+
   programs.mcfly = {
     enable = true;
     enableZshIntegration = true;
@@ -56,7 +63,14 @@
     '';
   };
 
-  programs.direnv.enable = true;
+  # programs.direnv.enable = true;
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    # cd を置き換える
+    options = [ "--cmd" "cd" ];
+  };
 
   programs.zellij = {
     enable = true;

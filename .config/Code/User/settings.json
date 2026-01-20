@@ -86,7 +86,7 @@
   "markdown.marp.enableHtml": true,
   // "terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
   // font
-  "editor.fontFamily": "'Ubuntu Mono', Cica, 'HackGen Console NF'",
+  "editor.fontFamily": "'Ubuntu Mono', Cica, 'HackLineNF', 'HackGen Console NF'",
   "editor.lineHeight": 17,
   "editor.letterSpacing": 0.4,
   "terminal.integrated.letterSpacing": 0.5,
@@ -96,7 +96,7 @@
   "git.openRepositoryInParentFolders": "never",
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
@@ -123,8 +123,7 @@
   "comment-formula.enableLanguages": ["cpp", "python", "rust", "python"],
   "comment-formula.style": "none",
   "glassit.alpha": 220,
-  "workbench.colorTheme": "Gruvbox Dark Hard",
-  "terminal.integrated.fontFamily": "'Ubuntu Mono', 'HackGen Console NF'",
+  "workbench.colorTheme": "Gruvbox Dark Soft",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
