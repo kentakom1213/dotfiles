@@ -47,6 +47,13 @@
 
   programs.zellij.enable = true;
 
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    # cd を置き換える
+    options = [ "--cmd" "cd" ];
+  };
+
   programs.zsh = {
     enable = true;
     defaultKeymap = "emacs";
