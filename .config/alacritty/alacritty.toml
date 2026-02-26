@@ -4,7 +4,7 @@
 padding = { x = 10, y = 10 }
 
 # ウィンドウの透明度 (0.0が完全に透明、1.0が不透明)
-opacity = 0.9
+opacity = 1.0
 
 [font]
 size = 13.5
