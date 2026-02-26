@@ -55,4 +55,4 @@ alias pg=password-generator
 alias ipe='/Applications/Ipe.app/Contents/MacOS/ipe'
 
 # spaceship
-[ -f "$HOME/.zsh/spaceship/spaceship.zsh" ] && source "$HOME/.zsh/spaceship/spaceship.zsh"
+# [ -f "$HOME/.zsh/spaceship/spaceship.zsh" ] && source "$HOME/.zsh/spaceship/spaceship.zsh"

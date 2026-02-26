@@ -38,7 +38,7 @@
     enableZshIntegration = true;
   };
 
-  # programs.starship.enable = true;
+  programs.starship.enable = true;
 
   programs.neovim.enable = true;
 
@@ -66,15 +66,6 @@
       source ~/.zshrc
     '';
   };
-
-  home.activation.installSpaceshipPrompt = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    if [ ! -d "$HOME/.zsh/spaceship/.git" ]; then
-      mkdir -p "$HOME/.zsh"
-      ${pkgs.git}/bin/git clone --depth=1 \
-        https://github.com/spaceship-prompt/spaceship-prompt.git \
-        "$HOME/.zsh/spaceship"
-    fi
-  '';
 
   home.file = {
   };
