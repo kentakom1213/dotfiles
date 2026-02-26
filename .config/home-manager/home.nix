@@ -64,10 +64,6 @@
     '';
     initExtra = ''
       source ~/.zshrc
-
-      if [ -f "$HOME/.zsh/spaceship/spaceship.zsh" ]; then
-        source "$HOME/.zsh/spaceship/spaceship.zsh"
-      fi
     '';
   };
 
