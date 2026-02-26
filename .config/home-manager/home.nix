@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   home.username = "komotokenta";
@@ -38,10 +38,7 @@
     enableZshIntegration = true;
   };
 
-  programs.starship = {
-    enable = true;
-    settings = {};
-  };
+  # programs.starship.enable = true;
 
   programs.neovim.enable = true;
 
@@ -67,8 +64,21 @@
     '';
     initExtra = ''
       source ~/.zshrc
+
+      if [ -f "$HOME/.zsh/spaceship/spaceship.zsh" ]; then
+        source "$HOME/.zsh/spaceship/spaceship.zsh"
+      fi
     '';
   };
+
+  home.activation.installSpaceshipPrompt = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    if [ ! -d "$HOME/.zsh/spaceship/.git" ]; then
+      mkdir -p "$HOME/.zsh"
+      ${pkgs.git}/bin/git clone --depth=1 \
+        https://github.com/spaceship-prompt/spaceship-prompt.git \
+        "$HOME/.zsh/spaceship"
+    fi
+  '';
 
   home.file = {
   };
