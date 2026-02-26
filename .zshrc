@@ -3,9 +3,6 @@ export SAVEHIST=100000
 export MCFLY_RESULTS=50
 export MCFLY_FUZZY=1
 
-# mcfly
-# eval "$(mcfly init zsh)"
-
 # yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -43,10 +40,6 @@ export GPG_TTY="$(tty)"
 
 # rye
 [ -f "$HOME/.rye/env" ] && source "$HOME/.rye/env"
-
-# slide
-alias sf=slide-flow
-alias pg=password-generator
 
 # haskell
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"

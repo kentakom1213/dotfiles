@@ -30,3 +30,6 @@ export PKG_CONFIG_PATH="/opt/homebrew/lib/pkgconfig"
 
 # Google Drive
 export MYDRIVE="$HOME/Google Drive/マイドライブ"
+
+alias sf=slide-flow
+alias pg=password-generator
