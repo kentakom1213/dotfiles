@@ -65,7 +65,8 @@
     envExtra = ''
       source ~/.config/home-manager/zshenv.sh
     '';
-    loginExtra = ''
+    initExtra = ''
+      source ~/.config/home-manager/zshinit.sh
     '';
   };
 
