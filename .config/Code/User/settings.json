@@ -123,7 +123,7 @@
   "comment-formula.enableLanguages": ["cpp", "python", "rust", "python"],
   "comment-formula.style": "none",
   "glassit.alpha": 220,
-  "workbench.colorTheme": "Gruvbox Light Hard",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
