@@ -66,7 +66,7 @@
       source ~/.config/home-manager/zshenv.sh
     '';
     initExtra = ''
-      source ~/.config/home-manager/zshinit.sh
+      source ~/.zshrc
     '';
   };
 
