@@ -63,11 +63,7 @@
     '';
 
     initExtra = ''
-      source ~/.config/home-manager/zshinit.sh
-
-      if [ -f "$HOME/.zsh/spaceship/spaceship.zsh" ]; then
-        source "$HOME/.zsh/spaceship/spaceship.zsh"
-      fi
+      source ~/.zshrc
     '';
   };
 
@@ -80,7 +76,7 @@
     fi
   '';
 
-  # programs.direnv.enable = true;
+  programs.direnv.enable = true;
 
   programs.zoxide = {
     enable = true;
@@ -93,6 +89,7 @@
     enable = true;
     enableZshIntegration = false;
   };
+
 
   programs.home-manager.enable = true;
 }

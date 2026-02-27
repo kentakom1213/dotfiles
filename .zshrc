@@ -49,3 +49,6 @@ source ~/.config/kyopro/util.sh
 
 # GPG key
 export GPG_TTY="$(tty)"
+
+# spaceship
+[ -f "$HOME/.zsh/spaceship/spaceship.zsh" ] && source "$HOME/.zsh/spaceship/spaceship.zsh"
