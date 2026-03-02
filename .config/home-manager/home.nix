@@ -13,23 +13,24 @@
     N_PREFIX = "$HOME/.n";
   };
 
-  home.packages = [
-    pkgs.glibcLocales
-    pkgs.ripgrep
-    pkgs.fd
-    pkgs.bat
-    pkgs.eza
-    pkgs.yazi
-    pkgs.fzf
-    pkgs.nodejs_20
-    pkgs.wrangler
+  home.packages = with pkgs; [
+    vim
+    glibcLocales
+    ripgrep
+    fd
+    bat
+    eza
+    yazi
+    fzf
+    nodejs_20
+    gh
   ];
 
   programs.git = {
     enable = true;
-    userName = "kentakom1213";
-    userEmail = "kentakom1213@gmail.com";
-    extraConfig = {
+    settings.user.name = "kentakom1213";
+    settings.user.email = "kentakom1213@gmail.com";
+    settings = {
       core.editor = "vim";
       init.defaultBranch = "main";
     };
@@ -46,9 +47,6 @@
     enable = true;
     enableZshIntegration = true;
   };
-
-  # programs.starship.enable = true;
-  # programs.neovim.enable = true;
 
   programs.zsh = {
     enable = true;
