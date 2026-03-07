@@ -24,6 +24,7 @@
     fzf
     nodejs_20
     gh
+    marp-cli
   ];
 
   programs.git = {
