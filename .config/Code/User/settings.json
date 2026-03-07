@@ -7,11 +7,15 @@
     "default": "right",
     "jupyter-notebook": "left",
   },
-  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
   "[python]": {
     "editor.tabSize": 4,
     "editor.formatOnType": true,
     "editor.defaultFormatter": "charliermarsh.ruff",
+  },
+  "[gleam]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
   },
   "[haskell]": {
     "editor.tabSize": 2,
@@ -25,21 +29,18 @@
   "[javascript]": {
     "editor.maxTokenizationLineLength": 2500,
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[gleam]": {
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
   },
   "[typescript]": {
     "editor.maxTokenizationLineLength": 2500,
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
+  "[svelte]": {
+    "editor.tabSize": 2,
+  },
   "[typescriptreact]": {
     "editor.maxTokenizationLineLength": 2500,
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[css]": {
     "editor.tabSize": 2,
@@ -49,31 +50,29 @@
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
   },
   "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.wordWrap": "on",
     "editor.quickSuggestions": {
       "comments": "on",
       "strings": "on",
       "other": "on",
     },
-    "editor.snippetSuggestions": "top",
+    "editor.defaultFormatter": "unifiedjs.vscode-remark",
+    "editor.formatOnSave": false,
   },
-  "[cpp]": {
-    "editor.wordBasedSuggestions": "off",
-    "editor.suggest.insertMode": "replace",
-    "editor.semanticHighlighting.enabled": true,
-  },
+  // Cのフォーマッタ
   "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}",
-  "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"> </div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"> <span class='date'></span></div>",
-  "markdown-pdf.footerTemplate": "<div style=\"font-size: 12px; margin: 0 auto;\"> <span class='pageNumber'></span> / <span class='totalPages'></span></div>",
+  "terminal.external.osxExec": "warp.app",
   "terminal.integrated.inheritEnv": false,
   "workbench.startupEditor": "none",
   "notebook.lineNumbers": "on",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "haskell.manageHLS": "GHCup",
   "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1",
+    "FIG_NEW_SESSION": "1"
   },
   "javascript.updateImportsOnFileMove.enabled": "never",
   "markdown.marp.themes": [
@@ -86,11 +85,14 @@
   "markdown.marp.enableHtml": true,
   // "terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
   // font
-  "editor.fontFamily": "'Ubuntu Mono', HackLineNF, 'HackGen Console NF'",
-  "editor.lineHeight": 17,
+  "editor.fontFamily": "'Ubuntu Mono', 'HackLineNF'",
+  "editor.lineHeight": 15,
   "editor.letterSpacing": 0.4,
-  "terminal.integrated.letterSpacing": 0.5,
-  "hediet.vscode-drawio.resizeImages": null,
+  // terminal.font
+  "terminal.integrated.fontFamily": "'Ubuntu Mono', 'HackLineNF', 'UDEV Gothic NF'",
+  "terminal.integrated.fontSize": 15,
+  // "terminal.integrated.letterSpacing": 1,
+  "hediet.vscode-drawio.resizeImages": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "redhat.telemetry.enabled": false,
   "git.openRepositoryInParentFolders": "never",
@@ -102,7 +104,7 @@
     "scminput": false,
     "yaml": false,
     "typescript": true,
-    "typst": false,
+    "typst": false
   },
   "hediet.vscode-drawio.theme": "atlas",
   "hediet.vscode-drawio.codeLinkActivated": false,
@@ -111,87 +113,51 @@
   "files.simpleDialog.enable": true,
   "editor.showFoldingControls": "always",
   "editor.minimap.autohide": "mouseover",
-  "explorer.incrementalNaming": "smart",
   "code-eol.color": "#a39586",
   "editor.minimap.enabled": false,
-
   "window.zoomLevel": 1,
   // PythonのinlayHintsの設定
-  "python.analysis.inlayHints.variableTypes": true,
-  "python.analysis.inlayHints.callArgumentNames": "all",
-  "python.analysis.inlayHints.functionReturnTypes": true,
+  // "python.analysis.inlayHints.variableTypes": true,
+  // "python.analysis.inlayHints.callArgumentNames": "all",
+  // "python.analysis.inlayHints.functionReturnTypes": true,
   "comment-formula.enableLanguages": ["cpp", "python", "rust", "python"],
   "comment-formula.style": "none",
   "glassit.alpha": 220,
+  "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "Gruvbox Dark Hard",
+  "editor.fontSize": 13.5,
+  "notebook.markup.fontSize": 14,
+  "githubPullRequests.pullBranch": "never",
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "tinymist.formatterMode": "typstyle",
+  "tinymist.exportPdf": "onSave",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "notebook.markup.fontSize": 14,
-  "remote.autoForwardPortsSource": "hybrid",
-  "terminal.integrated.fontSize": 15,
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
+  "explorer.incrementalNaming": "smart",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1,
   },
-  "github.copilot.editor.enableAutoCompletions": true,
-  "typst-lsp.experimentalFormatterMode": "on",
-  "editor.fontSize": 15,
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-  },
-  "markdown.marp.mathTypesetting": "katex",
-  "workbench.activityBar.location": "hidden",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/Users/komotokenta/.local/bin/nvim",
+  "editor.inlayHints.fontFamily": "'Ubuntu Mono'",
   "[typst]": {
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+    "editor.tabSize": 2,
   },
   "[typst-code]": {
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   },
-  "[latex]": {
-    "editor.defaultFormatter": "iamhyc.overleaf-workshop",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
-  "latex-workshop.synctex.afterBuild.enabled": true,
-  "terminal.integrated.enableImages": true,
-  "githubPullRequests.pullBranch": "never",
-  "rust-analyzer.cargo.target": "wasm32-unknown-unknown",
-  "tinymist.exportPdf": "onSave",
-  "[svelte]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "svelte.svelte-vscode",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "svelte.enable-ts-plugin": true,
   "umath.preview.enableMathPreview": false,
-  "[go]": {
-    "editor.formatOnSave": false,
-  },
-  // 各フィールドのインデント（"2 spaces", "4 spaces", "tab"など）
-  "latex-workshop.bibtex-format.tab": "2 spaces",
-
-  // trueにすると、エントリの最後のフィールドにもカンマを付ける
-  "latex-workshop.bibtex-format.trailingComma": false,
-
-  // エントリをソートする際のキーの配列。["author", "year", "title"]のように指定
-  "latex-workshop.bibtex-format.sortby": [
-    "key", // デフォルトは引用キーでソート
-  ],
-
-  // 各エントリ内のフィールドをソートする際の順番
-  "latex-workshop.bibtex-fields.order": [
-    "author",
-    "title",
-    "journal",
-    "volume",
-    "number",
-    "pages",
-    "year",
-    "publisher",
-    "booktitle",
-  ],
   "github.copilot.nextEditSuggestions.enabled": true,
-  "zig.zls.enabled": "on",
-  "docker.extension.enableComposeLanguageServer": false,
-  "go.lintOnSave": "off",
-  "go.toolsManagement.autoUpdate": true,
   "[dockercompose]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -206,8 +172,9 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
   },
-  "editor.stickyScroll.scrollWithEditor": false,
+  "markdown.marp.html": "all",
   "terminal.integrated.stickyScroll.enabled": false,
+  "docker.extension.enableComposeLanguageServer": false,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -217,24 +184,5 @@
         },
       },
     ],
-  },
-  "markdown.preview.fontFamily": "",
-  "explorer.fileNesting.patterns": {
-    "*.ts": "${capture}.js",
-    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-    "*.jsx": "${capture}.js",
-    "*.tsx": "${capture}.ts",
-    "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
-    "flake.nix": "flake.lock",
-    "Cargo.toml": "Cargo.lock",
-    "*.sqlite": "${capture}.${extname}-*",
-    "*.db": "${capture}.${extname}-*",
-    "*.sqlite3": "${capture}.${extname}-*",
-    "*.db3": "${capture}.${extname}-*",
-    "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*",
-  },
-  "markdown-preview-enhanced.enableScriptExecution": false,
-  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
+  }
 }

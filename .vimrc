@@ -1,3 +1,18 @@
+" プラグインの導入
+call plug#begin('~/.vim/plugged')
+  Plug 'morhetz/gruvbox'
+  " vim-lsp
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
+  " asyncomplete.vim
+  Plug 'prabirshrestha/asyncomplete.vim'
+  " rust
+  Plug 'rust-lang/rust.vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " vim-vsnip
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'hrsh7th/vim-vsnip-integ'
+call plug#end()
 
 " 行番号を表示
 set number
@@ -112,21 +127,6 @@ set laststatus=2
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
-
-" CoCの設定
-call plug#begin('~/.vim/plugged')
-  " vim-lsp
-  Plug 'prabirshrestha/vim-lsp'
-  Plug 'mattn/vim-lsp-settings'
-  " asyncomplete.vim
-  Plug 'prabirshrestha/asyncomplete.vim'
-  " rust
-  Plug 'rust-lang/rust.vim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  " vim-vsnip
-  Plug 'hrsh7th/vim-vsnip'
-  Plug 'hrsh7th/vim-vsnip-integ'
-call plug#end()
 
 syntax enable
 filetype plugin indent on

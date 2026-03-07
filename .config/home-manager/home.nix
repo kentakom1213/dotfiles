@@ -28,10 +28,15 @@
 
   programs.git = {
     enable = true;
-    settings.user.name = "kentakom1213";
-    settings.user.email = "kentakom1213@gmail.com";
     settings = {
-      core.editor = "vim";
+      user = {
+          name = "kentakom1213";
+          email = "kentakom1213@gmail.com";
+      };
+      core = {
+        editor = "vim";
+        quotepath = false;
+      };
       init.defaultBranch = "main";
     };
   };
