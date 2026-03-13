@@ -22,7 +22,7 @@
     eza
     yazi
     fzf
-    nodejs_20
+    nodejs_24
     gh
     marp-cli
   ];
