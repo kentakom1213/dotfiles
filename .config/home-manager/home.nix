@@ -21,7 +21,7 @@
     pkgs.eza
     pkgs.yazi
     pkgs.fzf
-    pkgs.nodejs_20
+    pkgs.nodejs_24
     pkgs.wrangler
   ];
 
