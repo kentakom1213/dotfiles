@@ -23,6 +23,7 @@
     yazi
     fzf
     nodejs_24
+    pnpm
     gh
     marp-cli
   ];
